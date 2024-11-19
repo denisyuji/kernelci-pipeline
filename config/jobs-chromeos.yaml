@@ -61,7 +61,7 @@ _anchors:
       <<: *min-5_4-rules
       tree:
         - mainline
-        - stable-rc
+        - stable-rc_6.6
 
   tast-debian: &tast-debian-job
     template: 'generic.jinja2'
@@ -77,9 +77,8 @@ _anchors:
     rules:
       tree:
         - mainline
-        - next
         - collabora-chromeos-kernel
-        - media
+        - stable-rc_6.6
 
   tast-basic: &tast-basic-job
     <<: *tast-job
@@ -465,7 +464,7 @@ _anchors:
         - mainline
         - next
         - collabora-chromeos-kernel
-        - media
+        - stable-rc_6.6
 
   fluster-chromeos: &fluster-chromeos-job
     template: 'fluster-chromeos.jinja2'
@@ -480,7 +479,7 @@ _anchors:
         - mainline
         - next
         - collabora-chromeos-kernel
-        - media
+        - stable-rc_6.6
 
   watchdog-reset: &watchdog-reset-job
     template: generic.jinja2
